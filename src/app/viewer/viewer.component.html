@@ -1,0 +1,5 @@
+@for (property of properties(); track property.name) {
+  {{property.name}}:
+  <ng-template [cdkPortalOutlet]="getComponentPortal(property)" (attached)="onAttached(property, $event)"/>
+  <hr>
+}
